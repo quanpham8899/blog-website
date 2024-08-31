@@ -1,0 +1,121 @@
+.post {
+  position: relative;
+  flex: 1;
+  max-width: 515px;
+  min-width: 335px;
+  height: 300px;
+  /* background-color: red; */
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.post a:visited {
+  text-decoration: none;
+}
+
+.post-background {
+  position: absolute;
+  background: url("/public/Background/Northern-lights.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  transition: transform .3s ease;
+  transform: scale3d(1,1,1);
+}
+
+.post-background-border {
+  position: absolute;
+  /* background-color: rgba(255, 83, 83, 0.222); */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0));
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: transform .3s ease;
+  transform: scale3d(1,1,1);
+}
+
+@media only screen and (max-width: 700px) {
+  .post {
+    width: 90%;
+    min-width: 250px;
+  }
+}
+
+.post-title ,.post-information {
+  flex: 1;
+  padding: 20px;
+}
+
+.post-title span {
+  display: block;
+  background-color: hsl(39, 100%, 45%);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.post-information {
+  padding-bottom: 15px;
+  width: calc(100% - 42px);
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  justify-content: end;
+  margin-top: 35px;
+}
+
+.post-information-title {
+  font-size: 1.35em;
+  text-align: left;
+}
+
+.post-information-summary {
+  padding-top: 5px;
+  text-align: left;
+  font-size: .95em;
+  flex: 2;
+}
+
+.post-information-author {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.author-avatar {
+  flex: 1;
+  flex-basis: 20px;
+  border-radius: 20px;
+  text-align: left;
+  max-width: 45px;
+}
+
+.author-name {
+  flex: 5;
+  text-align: left;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.author-date {
+  flex: 2;
+  text-align: right;
+}
+
+.author-avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+}

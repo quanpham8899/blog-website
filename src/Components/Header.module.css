@@ -1,0 +1,64 @@
+.header-image {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 500px;
+  background-image: url("/public/Background/Mountain-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-image-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header-image-content b {
+  font-size: 3em;
+}
+
+.header-image-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.35em;
+}
+
+.header-image-content-button {
+  margin-top: 10px;
+  padding: 15px 50px;
+  background-color: #c75e21;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.25em;
+  color: white;
+  font-weight: lighter;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  opacity: 0;
+  transition: opacity .5s, background-color .25s ease;
+}
+
+.header-image-content-button:hover {
+  background-color: #f17228;
+}
+
+.header-page-title {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.header-page-content {
+  text-align: center;
+  margin-top: 5px;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform .5s ease, opacity .5s ease;
+}
